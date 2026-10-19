@@ -18,10 +18,3 @@ def validate_task(data):
         errors.append("status harus salah satu dari: " + ", ".join(VALID_STATUS))
 
     return len(errors) == 0, errors
-
-import subprocess
-
-PASSWORD = "admin12345"          # hardcoded password (B105)
-
-def jalankan(perintah):
-    return subprocess.run(perintah, shell=True)   # shell=True (B602)
